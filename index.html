@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benim Web Sayfam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Merhaba, ben Gülden Süleç!</h1>
+  <img src="profil.jpg.jpg..webp" alt="Profil Fotoğrafım" class="profil-resmi">
+
+  <p>Bu benim ilk web sayfam. HTML ve CSS öğreniyorum.</p>
+
+  <section class="hakkimda-container">
+    <div class="hakkimda-karti">
+      <p>Merhaba! Ben Gülden.</p>
+    </div>
+  </section>
+
+  <!-- Portföy Bölümü -->
+  <div class="portfoy">
+    <h2>Portföy</h2>
+    <p>Yaptığım bazı projeleri buradan inceleyebilirsiniz.</p>
+
+    <!-- Projelerim Başlangıç -->
+    <div class="projects">
+      <h2>Projelerim</h2>
+
+      <div class="project-cards">
+        <!-- 1. Proje Kartı -->
+        <div class="card">
+          <img src="weather-preview.jpg" alt="Hava Durumu Uygulaması">
+          <h3>Hava Durumu Uygulaması</h3>
+          <p>Şehre göre hava durumu bilgisi verir.</p>
+          <a href="weather.html" target="_blank">Projeyi Gör</a>
+        </div>
+
+        <!-- 2. Proje Kartı - Kalp Yağmuru -->
+        <div class="card">
+          <img src="kalp-preview.jpg" alt="Kalp Yağmuru">
+          <h3>Kalp Yağmuru Efekti</h3>
+          <p>JavaScript ile ekranda uçuşan kalpler! 💖</p>
+          <a href="kalp.html" target="_blank">Projeyi Gör</a>
+        </div>
+      </div>
+    </div>
+    <!-- Projelerim Bitiş -->
+
+  </div>
+
+  <!-- İletişim Formu -->
+  <form action="#" method="POST">
+    <label for="isim">Adınız:</label><br>
+    <input type="text" id="isim" name="isim"><br><br>
+
+    <label for="email">E-posta:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="mesaj">Mesajınız:</label><br>
+    <textarea id="mesaj" name="mesaj"></textarea><br><br>
+
+    <input type="submit" value="Gönder">
+  </form>
+
+  <!-- Dış Bağlantılar -->
+  <h2>Bağlantılar</h2>
+  <ul>
+    <li><a href="https://www.google.com" target="_blank">Google</a></li>
+    <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+  </ul>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '💖';
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+
+      document.querySelector('.hearts-container')?.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 4000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
+
+  
